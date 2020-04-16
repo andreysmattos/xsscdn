@@ -1,4 +1,5 @@
 const express = require("express");
+const port = process.env.PORT || 3001
 const cors = require("cors");
 const fs = require('fs');
 var bodyParser = require('body-parser');
@@ -23,4 +24,4 @@ app.get("/", cors({ origin: true }), function (req, res) {
   return res.json('xd');
 });
 
-app.listen(3001);
+app.listen(port);
